@@ -2,6 +2,8 @@
   "name": "santi_component_ui",
   "version": "0.1.0",
   "private": true,
+  "description": "This is UI Components",
+  "main": "dist/index.js",
   "scripts": {
     "build": "babel src -d dist",
     "styleguide": "styleguidist server",
