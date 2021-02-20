@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Getting Started with Santi Component Ui
 
 This project was my personal side project created for personal use.
 
