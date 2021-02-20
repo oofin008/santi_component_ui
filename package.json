@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "styleguide": "styleguidist server",
-    "styleguide:buide": "styleguidist build"
+    "styleguide:build": "styleguidist build"
   },
   "eslintConfig": {
     "extends": [
