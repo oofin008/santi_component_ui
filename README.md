@@ -2,6 +2,8 @@
 
 This project was my personal side project created for personal use.
 
+## Latest Update
+stable version for MiniCardGrid shelf, working on adding more props to customize the element!
 ## Available Scripts
 
 In the project directory, you can run:
