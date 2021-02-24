@@ -1,6 +1,6 @@
 {
   "name": "@oofin008/santi_component_ui",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "This is UI Components",
   "main": "dist/index.js",
   "scripts": {
@@ -8,6 +8,21 @@
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build"
   },
+  "keywords": [
+    "frontend",
+    "component",
+    "reactjs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oofin008/santi_component_ui.git"
+  },
+  "author": "Santi Liwsakphaiboon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oofin008/santi_component_ui/issues"
+  },
+  "homepage": "https://github.com/oofin008/santi_component_ui#readme",
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -45,20 +60,5 @@
   "lint-staged": {
     "*.js": "eslint --fix",
     "*.{js,css,md}": "prettier --write"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/oofin008/santi_component_ui.git"
-  },
-  "keywords": [
-    "frontend",
-    "component",
-    "reactjs"
-  ],
-  "author": "Santi Liwsakphaiboon",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/oofin008/santi_component_ui/issues"
-  },
-  "homepage": "https://github.com/oofin008/santi_component_ui#readme"
+  }
 }
