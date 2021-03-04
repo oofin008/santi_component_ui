@@ -6,7 +6,7 @@ export const MiniCardGridContainer = styled.div`
   place-items: center;
   overflow: hidden;
   display: flex;
-  background: linear-gradient(130deg,#ff7a18,#af002d 41.07%,#319197 76.05%);
+  background: ${props => props.background ? props.background : ''};
   box-sizing: content-box;
   position: relative;
   :after {
@@ -42,7 +42,7 @@ export const MiniCardBox = styled.article`
 
   background: linear-gradient(152.97deg, rgba(21, 21, 21, 0.2) 0%, rgba(21, 21, 21, 0) 100%);
   backdrop-filter: blur(10px);
-  color: black;
+  color: white;
 
   border-radius: 1rem;
   padding: 2rem;

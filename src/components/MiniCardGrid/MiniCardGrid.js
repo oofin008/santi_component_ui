@@ -7,16 +7,20 @@ const MiniCard = (props) => {
   return (
     <MiniCardBox className="MiniCardBox">
       <time dateTime={Date.now()} title="test"><strong>Job</strong> on Jan 2020</time>
-      <h2>{title}</h2>
-      <p>{content}</p>
+      <h3>{title}</h3>
+      <div className="tags"></div>
+      <div className="contents">
+        <p>{content}</p>
+      </div>
     </MiniCardBox>
   )
 }
 
 const MiniCardGrid = (props) => {
-  const {data, theme} = props
+  const {data, background, theme} = props
+
   return (
-    <MiniCardGridContainer>
+    <MiniCardGridContainer background={background}>
       <MiniCardGridBox className="MiniCardGrid">
         {data.map((item, index) => {
           return (<Fragment key={index}>
@@ -28,7 +32,7 @@ const MiniCardGrid = (props) => {
   )
 }
 
-const { string, number, arrayOf, exact } = PropTypes;
+const { string, number, arrayOf, exact, oneOf } = PropTypes;
 
 const dataObject = exact({
   title: string,
@@ -39,8 +43,12 @@ const dataObject = exact({
   teamSize: number
 });
 
+const themeObj = oneOf(['light', 'dark']);
+
 MiniCardGrid.propTypes = {
   data: arrayOf(dataObject).isRequired,
-  theme: string
+  background: string,
+  theme: themeObj
+  
 }
 export default MiniCardGrid
