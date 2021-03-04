@@ -1,6 +1,6 @@
 {
   "name": "@oofin008/santi_component_ui",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This is UI Components",
   "main": "dist/index.js",
   "scripts": {
