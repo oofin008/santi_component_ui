@@ -22,6 +22,8 @@ import { COMPONENT } from '@oofin008/santi-component-ui';
 ### MiniCardGrid
 ```js
   <MiniCardGrid 
+    background="linear-gradient(130deg,#ff7a18,#af002d 41.07%,#319197 76.05%)"
+    theme="light"
     data = {[
       {
         title: "test 1", 

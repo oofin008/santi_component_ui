@@ -17,7 +17,7 @@ const MiniCard = (props) => {
 }
 
 const MiniCardGrid = (props) => {
-  const {data, background, theme} = props
+  const {data, background } = props
 
   return (
     <MiniCardGridContainer background={background}>
