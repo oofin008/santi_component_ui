@@ -1,42 +1,67 @@
-import React, {Fragment} from 'react'
-import PropTypes from 'prop-types'
-import { MiniCardGridContainer, MiniCardGridBox, MiniCardBox} from './style';
+import React, { useState, Fragment } from 'react';
+import PropTypes from 'prop-types';
+import LazyLoad from 'react-lazy-load';
+import { CardImage } from '@styled-icons/bootstrap';
+import { MiniCardGridContainer, MiniCardGridBox, MiniCardBox } from './style';
 
-const MiniCard = (props) => {
-  const {title, content} = props;
+const MiniCard = props => {
+  const { title, content, imageSrc } = props;
+  const [isPlaceholder, setIsPlaceholder] = useState(false);
+
   return (
     <MiniCardBox className="MiniCardBox">
-      <time dateTime={Date.now()} title="test"><strong>Job</strong> on Jan 2020</time>
-      <h3>{title}</h3>
+      <time dateTime={Date.now()} title="test">
+        <strong>Job</strong> on Jan 2020
+      </time>
+      <div className="thumb">
+        <LazyLoad debounce={false}>
+          <>
+            <img
+              src={imageSrc}
+              onError={e => {
+                e.preventDefault();
+                e.target.onerror = null;
+                e.target.parentNode.removeChild(e.target);
+                setIsPlaceholder(true);
+              }}
+            />
+            {isPlaceholder ? <CardImage title={title}/> : null}
+          </>
+        </LazyLoad>
+      </div>
+      <h3 title={title}>{title}</h3>
       <div className="tags"></div>
       <div className="contents">
         <p>{content}</p>
       </div>
     </MiniCardBox>
-  )
-}
+  );
+};
 
-const MiniCardGrid = (props) => {
-  const {data, background } = props
+const MiniCardGrid = props => {
+  const { data, background } = props;
 
   return (
     <MiniCardGridContainer background={background}>
       <MiniCardGridBox className="MiniCardGrid">
         {data.map((item, index) => {
-          return (<Fragment key={index}>
-            <MiniCard title={item.title} content={item.content} />
-          </Fragment>)
+          return (
+            <Fragment key={index}>
+              <MiniCard {...item} />
+            </Fragment>
+          );
         })}
       </MiniCardGridBox>
     </MiniCardGridContainer>
-  )
-}
+  );
+};
 
 const { string, number, arrayOf, exact, oneOf } = PropTypes;
 
 const dataObject = exact({
   title: string,
   content: string,
+  imageSrc: string,
   startDate: string,
   endDate: string,
   clientName: string,
@@ -49,6 +74,5 @@ MiniCardGrid.propTypes = {
   data: arrayOf(dataObject).isRequired,
   background: string,
   theme: themeObj
-  
-}
-export default MiniCardGrid
+};
+export default MiniCardGrid;

@@ -4,8 +4,9 @@
   theme="light"
   data={[
     {
-      title: 'test 1',
+      title: 'test 1 very longgg titleadasdasdasdasdasd',
       content: 'lorem ipsum project description action mission mansion',
+      imageSrc: 'asdf',
       startDate: 'Jan, 2021',
       endDate: '-',
       clientName: 'Ananta Solutions Co,. Ltd',
@@ -14,6 +15,7 @@
     {
       title: 'test 2',
       content: 'lorem ipsum project description action mission mansion',
+      imageSrc: 'https://i.stack.imgur.com/2awmj.png',
       startDate: 'Jan, 2021',
       endDate: '-',
       clientName: 'Ananta Solutions Co,. Ltd',
@@ -62,6 +64,7 @@
     {
       title: 'test 8',
       content: 'lorem ipsum project description action mission mansion',
+      imageSrc: 'https://i.stack.imgur.com/2awmj.png',
       startDate: 'Jan, 2021',
       endDate: '-',
       clientName: 'Ananta Solutions Co,. Ltd',

@@ -1,23 +1,22 @@
 import styled from 'styled-components';
 
 export const MiniCardGridContainer = styled.div`
-
   margin: 0;
   place-items: center;
   overflow: hidden;
   display: flex;
-  background: ${props => props.background ? props.background : ''};
+  background: ${props => (props.background ? props.background : '')};
   box-sizing: content-box;
   position: relative;
   :after {
-    content: "";
+    content: '';
     position: absolute;
     right: 0;
     top: 3rem;
     bottom: 4rem;
     width: 5px;
     border-radius: 5px;
-    background: linear-gradient(130deg,#ff7a18,#af002d 41.07%,#319197 76.05%);
+    background: linear-gradient(130deg, #ff7a18, #af002d 41.07%, #319197 76.05%);
     box-shadow: -10px 0 20px 3px #000;
   }
 `;
@@ -65,8 +64,30 @@ export const MiniCardBox = styled.article`
     transform: translateX(4.5rem);
   }
 
-  h2 {
+  time {
+
+  }
+
+  .thumb {
     display: block;
+    img {
+      width: 100%;
+    }
+  }
+
+  h3 {
+    display: block;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+  }
+
+  .tags {
+
+  }
+
+  .contents {
+
   }
 
 `;
