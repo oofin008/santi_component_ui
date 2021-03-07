@@ -17,6 +17,7 @@ const MiniCard = props => {
         <LazyLoad debounce={false}>
           <>
             <img
+              alt={title}
               src={imageSrc}
               onError={e => {
                 e.preventDefault();

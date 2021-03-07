@@ -1,8 +1,11 @@
 This project was my personal side project created for personal use.
 
 ## Latest Update
-
-stable version for MiniCardGrid shelf, working on adding more props to customize the element!
+#### MiniCardGrid
+ - Add imageSrc attribute.
+ - Add onError handler for img, to show placeholder correctly.
+ - Add background attribute.
+ - Add theme attribute (not finish yet).
 
 ## Table of Contents
 
