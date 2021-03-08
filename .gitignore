@@ -14,6 +14,7 @@ package-lock.json
 /styleguide
 
 # misc
+.firebase
 .eslintcache
 .DS_Store
 .env.local
@@ -22,5 +23,6 @@ package-lock.json
 .env.production.local
 
 npm-debug.log*
+npm-error.log*
 yarn-debug.log*
 yarn-error.log*

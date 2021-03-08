@@ -5,5 +5,8 @@
 .gitignore
 .prettierrc
 .eslintcache
+.firebaserc
+.firebase
 
+firebase.json
 styleguide.config.js
