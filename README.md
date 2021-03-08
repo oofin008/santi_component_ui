@@ -20,7 +20,7 @@ import { COMPONENT } from '@oofin008/santi-component-ui';
 ```
 
 ## Components List
-
+You can see all components category [here](https://santi-component-ui.web.app/) along with example code.
 ### Card
 
 ```js
