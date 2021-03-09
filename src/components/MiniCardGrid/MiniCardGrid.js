@@ -16,7 +16,7 @@ const MiniCard = props => {
       <div className="thumb">
         <LazyLoad debounce={false}>
           <>
-            <img
+            {imageSrc ? <img
               alt={title}
               src={imageSrc}
               onError={e => {
@@ -25,7 +25,7 @@ const MiniCard = props => {
                 e.target.parentNode.removeChild(e.target);
                 setIsPlaceholder(true);
               }}
-            />
+            /> : null}
             {isPlaceholder ? <CardImage title={title}/> : null}
           </>
         </LazyLoad>
