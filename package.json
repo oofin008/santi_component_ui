@@ -23,7 +23,7 @@
     "bugs": {
         "url": "https://github.com/oofin008/santi_component_ui/issues"
     },
-    "homepage": "https://github.com/oofin008/santi_component_ui#readme",
+    "homepage": "https://santi-component-ui.web.app/",
     "eslintConfig": {
         "extends": [
             "react-app",
