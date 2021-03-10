@@ -43,6 +43,7 @@
         "react-lazy-load": "^3.1.13",
         "react-lazy-load-image-component": "^1.5.1",
         "react-scripts": "4.0.1",
+        "react-slick": "^0.28.1",
         "reactstrap": "^8.9.0",
         "styled-components": "^5.2.1",
         "styled-icons": "^10.29.0",
