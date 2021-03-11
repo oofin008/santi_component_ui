@@ -38,7 +38,10 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 var MiniCard = function MiniCard(props) {
   var title = props.title,
       content = props.content,
-      imageSrc = props.imageSrc;
+      imageSrc = props.imageSrc,
+      startDate = props.startDate,
+      endDate = props.endDate,
+      clientName = props.clientName;
 
   var _useState = (0, _react.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
@@ -50,11 +53,12 @@ var MiniCard = function MiniCard(props) {
   }, /*#__PURE__*/_react["default"].createElement("time", {
     dateTime: Date.now(),
     title: "test"
-  }, /*#__PURE__*/_react["default"].createElement("strong", null, "Job"), " on Jan 2020"), /*#__PURE__*/_react["default"].createElement("div", {
+  }, "From ", startDate, " to ", endDate), /*#__PURE__*/_react["default"].createElement("div", {
     className: "thumb"
   }, /*#__PURE__*/_react["default"].createElement(_reactLazyLoad["default"], {
     debounce: false
-  }, /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement("img", {
+  }, /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, imageSrc ? /*#__PURE__*/_react["default"].createElement("img", {
+    alt: title,
     src: imageSrc,
     onError: function onError(e) {
       e.preventDefault();
@@ -62,13 +66,14 @@ var MiniCard = function MiniCard(props) {
       e.target.parentNode.removeChild(e.target);
       setIsPlaceholder(true);
     }
-  }), isPlaceholder ? /*#__PURE__*/_react["default"].createElement(_bootstrap.CardImage, {
-    title: title
+  }) : null, isPlaceholder ? /*#__PURE__*/_react["default"].createElement(_bootstrap.CardImage, {
+    title: title,
+    size: "80px"
   }) : null))), /*#__PURE__*/_react["default"].createElement("h3", {
     title: title
   }, title), /*#__PURE__*/_react["default"].createElement("div", {
     className: "tags"
-  }), /*#__PURE__*/_react["default"].createElement("div", {
+  }, clientName), /*#__PURE__*/_react["default"].createElement("div", {
     className: "contents"
   }, /*#__PURE__*/_react["default"].createElement("p", null, content)));
 };
