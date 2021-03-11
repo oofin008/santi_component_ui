@@ -5,13 +5,13 @@ import { CardImage } from '@styled-icons/bootstrap';
 import { MiniCardGridContainer, MiniCardGridBox, MiniCardBox } from './style';
 
 const MiniCard = props => {
-  const { title, content, imageSrc } = props;
+  const { title, content, imageSrc, startDate, endDate, clientName } = props;
   const [isPlaceholder, setIsPlaceholder] = useState(false);
 
   return (
     <MiniCardBox className="MiniCardBox">
       <time dateTime={Date.now()} title="test">
-        <strong>Job</strong> on Jan 2020
+        From {startDate} to {endDate}
       </time>
       <div className="thumb">
         <LazyLoad debounce={false}>
@@ -26,12 +26,12 @@ const MiniCard = props => {
                 setIsPlaceholder(true);
               }}
             /> : null}
-            {isPlaceholder ? <CardImage title={title}/> : null}
+            {isPlaceholder ? <CardImage title={title} size={"80px"}/> : null}
           </>
         </LazyLoad>
       </div>
       <h3 title={title}>{title}</h3>
-      <div className="tags"></div>
+      <div className="tags">{clientName}</div>
       <div className="contents">
         <p>{content}</p>
       </div>
