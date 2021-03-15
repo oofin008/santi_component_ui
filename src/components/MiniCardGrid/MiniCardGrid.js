@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Image from '../../common/Image/Image';
 import { MiniCardGridContainer, MiniCardGridBox, MiniCardBox } from './style';
