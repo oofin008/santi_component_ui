@@ -5,7 +5,7 @@ export const CardBox = styled.div`
   height: 350px;
 
   background: linear-gradient(152.97deg, rgba(21, 21, 21, 0.2) 0%, rgba(21, 21, 21, 0) 100%);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(4l0px);
 
   border-radius: 16px;
   color: white

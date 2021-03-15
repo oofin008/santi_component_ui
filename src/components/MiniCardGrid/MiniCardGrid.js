@@ -1,7 +1,6 @@
 import React, { useState, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import LazyLoad from 'react-lazy-load';
-import { CardImage } from '@styled-icons/bootstrap';
+import Image from '../../common/Image/Image';
 import { MiniCardGridContainer, MiniCardGridBox, MiniCardBox } from './style';
 
 const MiniCard = props => {
@@ -14,21 +13,7 @@ const MiniCard = props => {
         From {startDate} to {endDate}
       </time>
       <div className="thumb">
-        <LazyLoad debounce={false}>
-          <>
-            {imageSrc ? <img
-              alt={title}
-              src={imageSrc}
-              onError={e => {
-                e.preventDefault();
-                e.target.onerror = null;
-                e.target.parentNode.removeChild(e.target);
-                setIsPlaceholder(true);
-              }}
-            /> : null}
-            {isPlaceholder ? <CardImage title={title} size={"80px"}/> : null}
-          </>
-        </LazyLoad>
+        <Image imageSrc={imageSrc} imageAlt={title} imagePlaceholder />
       </div>
       <h3 title={title}>{title}</h3>
       <div className="tags">{clientName}</div>
