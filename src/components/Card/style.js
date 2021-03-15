@@ -11,7 +11,11 @@ export const CardBox = styled.div`
   color: white
 `;
 
+export const ImageBox = styled.div``;
+
 export const Title = styled.p`
   color: white,
 
 `;
+
+export const Content = styled.article``;
