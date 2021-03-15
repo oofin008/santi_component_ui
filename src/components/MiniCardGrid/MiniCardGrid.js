@@ -5,7 +5,6 @@ import { MiniCardGridContainer, MiniCardGridBox, MiniCardBox } from './style';
 
 const MiniCard = props => {
   const { title, content, imageSrc, startDate, endDate, clientName } = props;
-  const [isPlaceholder, setIsPlaceholder] = useState(false);
 
   return (
     <MiniCardBox className="MiniCardBox">
