@@ -24,6 +24,7 @@
     {
       title: 'test 3',
       content: 'lorem ipsum project description action mission mansion',
+      imageSrc: 'https://i.ytimg.com/vi/RuNAPPcjDr4/maxresdefault.jpg',
       startDate: 'Jan, 2021',
       endDate: '-',
       clientName: 'Ananta Solutions Co,. Ltd',

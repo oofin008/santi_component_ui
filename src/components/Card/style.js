@@ -8,13 +8,23 @@ export const CardBox = styled.div`
   backdrop-filter: blur(4l0px);
 
   border-radius: 16px;
-  color: white
+  color: white;
+  position: relative;
+
+  .thumb {
+    width: 100px;
+    height: auto;
+  }
 `;
 
-export const ImageBox = styled.div``;
+export const ImageBox = styled.div`
+  width: 100px;
+  height: 100px;
+  display: block;
+`;
 
 export const Title = styled.p`
-  color: white,
+  color: white;
 
 `;
 

@@ -72,6 +72,7 @@ export const MiniCardBox = styled.article`
     display: block;
     img {
       width: 100%;
+      border-radius: 6px;
     }
   }
 

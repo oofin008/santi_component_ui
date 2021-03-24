@@ -1,7 +1,7 @@
 ```jsx
   <Card 
-    title="test"
+    title="overlord"
     imageSrc=""
-    content=""
+    content="lorem ipsum overlord awesome"
   />
 ```

@@ -8,9 +8,9 @@ const Card = props => {
 
   return (
     <CardBox>
-      <ImageBox>
+      <div className="thumb">
         <Image imageSrc={imageSrc} imageAlt={title} imagePlaceholder />
-      </ImageBox>
+      </div>
       <Title>{title}</Title>
       <Content>{content}</Content>
     </CardBox>
