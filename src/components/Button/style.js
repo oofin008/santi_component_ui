@@ -4,10 +4,10 @@ export const ButtonBox = styled.button`
   width: ${props => (props.width ? props.width : 'inherit')};
   height: ${props => (props.height ? props.height : 'inherit')};
   border-radius: 37px;
-  border-color: #ff7a18;
-  color: white;
+  border-color: red;
+  color: black;
   font-size: inherit;
-  background: #ff7a18;
+  background: white;
 
   &:active,:focus {
     border-box: none;
