@@ -14,7 +14,7 @@ This project was my personal side project created for personal use.
 ## Usage
 
 ```js
-import { COMPONENT } from '@oofin008/santi-component-ui';
+import { COMPONENT } from '@oofin008/santi_component_ui';
 ```
 
 ## Components List
@@ -25,7 +25,7 @@ If you want to help me adding more awesome component, feel free to fork my proje
 
 You can run following command for developing this project.
 
-## Available Scripts
+## Available Scripts for Development
 
 In the project directory, you can run: 
 #### `npm i`

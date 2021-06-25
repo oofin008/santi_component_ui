@@ -7,7 +7,8 @@
         "build": "babel src -d dist",
         "styleguide": "styleguidist server",
         "styleguide:build": "styleguidist build",
-        "version-select": "version-select"
+        "version-select": "version-select",
+        "clean": "rimraf dist"
     },
     "keywords": [
         "frontend",

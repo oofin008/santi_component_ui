@@ -4,13 +4,10 @@ import Image from '../../common/Image/Image';
 import { MiniCardGridContainer, MiniCardGridBox, MiniCardBox } from './style';
 
 const MiniCard = props => {
-  const { title, content, imageSrc, startDate, endDate, clientName } = props;
+  const { title, content, imageSrc, clientName } = props;
 
   return (
     <MiniCardBox className="MiniCardBox">
-      <time dateTime={Date.now()} title="test">
-        From {startDate} to {endDate}
-      </time>
       <div className="thumb">
         <Image imageSrc={imageSrc} imageAlt={title} imagePlaceholder />
       </div>
@@ -41,16 +38,11 @@ const MiniCardGrid = props => {
   );
 };
 
-const { string, number, arrayOf, exact, oneOf } = PropTypes;
+const { string, arrayOf, exact, oneOf } = PropTypes;
 
 const dataObject = exact({
   title: string,
   content: string,
-  imageSrc: string,
-  startDate: string,
-  endDate: string,
-  clientName: string,
-  teamSize: number
 });
 
 const themeObj = oneOf(['light', 'dark']);
