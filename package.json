@@ -8,7 +8,9 @@
         "styleguide": "styleguidist server",
         "styleguide:build": "styleguidist build",
         "version-select": "version-select",
-        "clean": "rimraf dist"
+        "clean:dist": "rimraf dist",
+        "clean:styleguide": "rimraf styleguide",
+        "clean": "rimraf dist styleguide"
     },
     "keywords": [
         "frontend",
