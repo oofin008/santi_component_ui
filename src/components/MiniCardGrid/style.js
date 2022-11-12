@@ -56,8 +56,7 @@ export const MiniCardBox = styled.article`
   :hover {
     box-shadow: -10px 0 20px 3px rgba(21,21,21,0.1);
     background: linear-gradient(152.97deg, rgba(255, 255, 255, 0.2) 0%, rgba(21, 21, 21, 0) 100%);
-    transform: translateY(-2rem) rotate(3deg); 
-
+    transform: translateY(-2rem) rotate(3deg);
   }
 
   :hover ~ .MiniCardBox {

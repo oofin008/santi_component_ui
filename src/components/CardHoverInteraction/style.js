@@ -1,21 +1,15 @@
 import styled from 'styled-components';
 
-export const Shelf = styled.section`
-  display: grid;
-  grid-gap: 1rem;
-  padding: 1rem;
-  max-width: 1024px;
-  margin: 0 auto;
-  font-family: 'Rubik', sans-serif;
-
-  @media (min-width: 600px) {
-    grid-template-columns: repeat(2, 1fr);
+export const SkeletonCard = styled.div`
+  width: 210px;
+  hight: 350px
+  backgroundColor: white;
+  &:after {
+    content: ''
+    backgroundColor: black;
+    width: 100px
   }
-
-  @media (min-width: 800px) {
-    grid-template-columns: repeat(4, 1fr);
-  }
-`;
+`
 
 export const Card = styled.div`
   @media (hover: hover) and (min-width: 600px) {
@@ -38,9 +32,29 @@ export const Card = styled.div`
     &:hover,
     &:focus-within {
       align-items: center;
-
       &:before { transform: translateY(-4%); }
-      &:after { transform: translateY(-50%); }
+      &:after { 
+        transform: translateY(-50%);
+        background-image: linear-gradient(
+          to bottom,
+          hsla(0, 0%, 0%, 0) 0%,
+          hsla(0, 0%, 0%, 0.009) 11.7%,
+          hsla(0, 0%, 0%, 0.034) 22.1%,
+          hsla(0, 0%, 0%, 0.072) 31.2%,
+          hsla(0, 0%, 0%, 0.123) 39.4%,
+          hsla(0, 0%, 0%, 0.182) 46.6%,
+          hsla(0, 0%, 0%, 0.249) 53.1%,
+          hsla(0, 0%, 0%, 0.320) 58.9%,
+          hsla(0, 0%, 0%, 0.394) 64.3%,
+          hsla(0, 0%, 0%, 0.468) 69.3%,
+          hsla(0, 0%, 0%, 0.540) 74.1%,
+          hsla(0, 0%, 0%, 0.607) 78.8%,
+          hsla(0, 0%, 0%, 0.668) 83.6%,
+          hsla(0, 0%, 0%, 0.721) 88.7%,
+          hsla(0, 0%, 0%, 0.762) 94.1%,
+          hsla(0, 0%, 0%, 0.790) 100%
+        );
+      }
 
       .content {
         transform: translateY(0);
@@ -94,7 +108,7 @@ export const Card = styled.div`
     background-position: 0 0;
     transition: transform calc(700ms * 1.5) cubic-bezier(0.19, 1, 0.22, 1);;
     pointer-events: none;
-    background-image: url(https://images.unsplash.com/photo-1517021897933-0e0319cfbc28?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+    background-image: url(${props => (props.backgroundImg ? props.backgroundImg : '')});
   }
 
   &:after {
@@ -106,25 +120,6 @@ export const Card = styled.div`
     width: 100%;
     height: 200%;
     pointer-events: none;
-    background-image: linear-gradient(
-      to bottom,
-      hsla(0, 0%, 0%, 0) 0%,
-      hsla(0, 0%, 0%, 0.009) 11.7%,
-      hsla(0, 0%, 0%, 0.034) 22.1%,
-      hsla(0, 0%, 0%, 0.072) 31.2%,
-      hsla(0, 0%, 0%, 0.123) 39.4%,
-      hsla(0, 0%, 0%, 0.182) 46.6%,
-      hsla(0, 0%, 0%, 0.249) 53.1%,
-      hsla(0, 0%, 0%, 0.320) 58.9%,
-      hsla(0, 0%, 0%, 0.394) 64.3%,
-      hsla(0, 0%, 0%, 0.468) 69.3%,
-      hsla(0, 0%, 0%, 0.540) 74.1%,
-      hsla(0, 0%, 0%, 0.607) 78.8%,
-      hsla(0, 0%, 0%, 0.668) 83.6%,
-      hsla(0, 0%, 0%, 0.721) 88.7%,
-      hsla(0, 0%, 0%, 0.762) 94.1%,
-      hsla(0, 0%, 0%, 0.790) 100%
-    );
     transform: translateY(-50%);
     transition: transform calc(700ms * 2) cubic-bezier(0.19, 1, 0.22, 1);;
   }
