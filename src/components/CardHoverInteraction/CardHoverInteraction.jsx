@@ -6,7 +6,7 @@ const CardHover = props => {
   const { backgroundImg, title, description, buttonText, onClick, isLoading } = props;
 
   if(isLoading) {
-    return (<SkeletonCard >Test</SkeletonCard>);
+    return (<SkeletonCard ></SkeletonCard>);
   } else {
     return (
       <Card backgroundImg={backgroundImg}>

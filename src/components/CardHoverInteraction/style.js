@@ -2,12 +2,25 @@ import styled from 'styled-components';
 
 export const SkeletonCard = styled.div`
   width: 210px;
-  hight: 350px
-  backgroundColor: white;
+  height: 350px;
+  padding: 1rem;
+  background: radial-gradient(circle at 0% 0.5%, rgb(241, 241, 242) 0.1%, rgb(224, 226, 228) 100.2%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1), 
+    0 2px 2px rgba(0,0,0,0.1), 
+    0 4px 4px rgba(0,0,0,0.1), 
+    0 8px 8px rgba(0,0,0,0.1),
+    0 16px 16px rgba(0,0,0,0.1);
   &:after {
-    content: ''
-    backgroundColor: black;
-    width: 100px
+    content: 'Loading...';
+    font-size: 1.3rem;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+    color: whitesmoke;
+    width: 100px;
   }
 `
 
