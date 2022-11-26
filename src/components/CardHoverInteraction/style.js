@@ -23,8 +23,14 @@ export const SkeletonCard = styled.div`
     width: 100px;
   }
 `
+export const Shelf = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+`;
 
 export const Card = styled.div`
+  margin: 10px;
   @media (hover: hover) and (min-width: 600px) {
     &:after {
       transform: translateY(0);

@@ -1,31 +1,45 @@
-import React from 'react';
-import { string, func, bool }from 'prop-types';
-import { Card, Content, Title, Desc, Button, SkeletonCard} from './style';
+import React, { Fragment } from 'react';
+import { string, func, arrayOf }from 'prop-types';
+import { Shelf, Card, Content, Title, Desc, Button} from './style';
 
-const CardHover = props => {
-  const { backgroundImg, title, description, buttonText, onClick, isLoading } = props;
-
-  if(isLoading) {
-    return (<SkeletonCard ></SkeletonCard>);
-  } else {
-    return (
-      <Card backgroundImg={backgroundImg}>
-        <Content className='content'>
-          <Title className='title'>{title}</Title>
-          <Desc className='desc'>{description}</Desc>
-          <Button onClick={onClick}>{buttonText}</Button>
-        </Content>
-      </Card>
-    );
-  }
+const HoverCard = props => {
+  const { backgroundImg, title, description, buttonText, onClick } = props;
+  return (
+    <Card backgroundImg={backgroundImg}>
+      <Content className='content'>
+        <Title className='title'>{title}</Title>
+        <Desc className='desc'>{description}</Desc>
+        <Button onClick={onClick}>{buttonText}</Button>
+      </Content>
+    </Card>
+  );
 };
 
-CardHover.propTypes = {
-  isLoading: bool,
+const HoverCardGrid = props => {
+  const { data } = props;
+  return (
+    <Shelf>
+      {data.map((item, index) => {
+        return (
+          <Fragment key={index}>
+            <HoverCard {...item} />
+          </Fragment>
+        )
+      })}
+    </Shelf>
+  )
+}
+
+HoverCard.propTypes = {
   backgroundImg: string,
   title: string.isRequired,
   description: string,
   buttonText: string.isRequired,
   onClick: func.isRequired,
 };
-export default CardHover;
+
+HoverCardGrid.propTypes = {
+  data: arrayOf(HoverCard.propTypes).isRequired,
+}
+
+export default HoverCardGrid;
